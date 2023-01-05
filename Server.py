@@ -10,6 +10,7 @@ server_socket.listen()
 secret_number = random.randint(1, 100)
 
 while True:
+  print(secret_number)
   # Accept incoming connections
   client_socket, client_address = server_socket.accept()
 
