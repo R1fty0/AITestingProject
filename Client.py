@@ -3,16 +3,13 @@ import socket
 # Set up the client socket
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-while True:
-  try:
-    # Connect to the server
-    client_socket.connect(('localhost', 5000))
-  except ConnectionRefusedError:
-    print('No connection could be made because the target machine actively refused it')
-  else:
-    break
+# Get the server's IP address
+server_ip = input('Enter the server IP address: ')
 
 while True:
+  # Connect to the server
+  client_socket.connect((server_ip, 5000))
+
   # Get a guess from the user
   guess = input('Enter a number between 1 and 100: ')
   guess = int(guess)
