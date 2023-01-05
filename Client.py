@@ -5,7 +5,6 @@ client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Get the server's IP address
 server_ip = input('Enter the server IP address: ')
-# Connect to the server
 client_socket.connect((server_ip, 5000))
 
 while True:
